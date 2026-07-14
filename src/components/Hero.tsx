@@ -40,15 +40,18 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-slate-50 dark:bg-slate-950"
     >
-      {/* Background GIF with Dark Glass Overlay */}
+      {/* Background Video with Dark Glass Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
-          src="/design.gif"
-          alt="Background Design"
-          className="w-full h-full object-cover opacity-65 select-none pointer-events-none"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/70 to-slate-950 z-10" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-45 select-none pointer-events-none"
+        >
+          <source src="/4145551-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/60 to-slate-950 z-10" />
       </div>
 
       {/* Dynamic Floating Background Gradient Orbs */}
