@@ -45,12 +45,24 @@ export default function Contact() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-navy-base dark:text-white">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl font-display font-extrabold text-navy-base dark:text-white"
+          >
             {t.contactTitle}
-          </h2>
-          <p className="text-slate-600 dark:text-slate-300 font-light text-base sm:text-lg">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-slate-600 dark:text-slate-300 font-light text-base sm:text-lg"
+          >
             {t.contactSubtitle}
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">

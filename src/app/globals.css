@@ -13,6 +13,9 @@
   
   --color-lightgray: #eaf7fd;
   --color-softbg: #f0fafd;
+
+  --font-display: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-plus-jakarta), sans-serif;
 }
 
 :root {
@@ -87,5 +90,5 @@ body {
 }
 
 [dir="ltr"] {
-  font-family: var(--font-inter), var(--font-poppins), Arial, sans-serif;
+  font-family: var(--font-plus-jakarta), Arial, sans-serif;
 }

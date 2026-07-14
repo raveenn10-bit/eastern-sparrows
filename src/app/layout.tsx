@@ -1,16 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins, Cairo } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit, Cairo } from "next/font/google";
 import { AppContextProvider } from "@/context/AppContext";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
   display: "swap",
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${poppins.variable} ${cairo.variable} h-full antialiased`}
+      className={`${plusJakarta.variable} ${outfit.variable} ${cairo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-slate-50 dark:bg-slate-950">
         <AppContextProvider>

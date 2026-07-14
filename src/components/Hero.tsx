@@ -77,22 +77,53 @@ export default function Hero() {
             </motion.div>
 
             {/* Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-navy-base dark:text-white leading-[1.1] tracking-tight"
-            >
-              {isRtl ? (
-                <>
-                  خدمات <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandblue to-indigo-400">تنظيف ومكافحة حشرات</span> احترافية في قطر
-                </>
-              ) : (
-                <>
-                  Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandblue to-indigo-400">Cleaning & Pest</span> Control in Qatar
-                </>
-              )}
-            </motion.h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-navy-base dark:text-white leading-[1.1] tracking-tight">
+              {(() => {
+                const words = isRtl
+                  ? ["خدمات", "تنظيف", "ومكافحة", "حشرات", "احترافية", "في", "قطر"]
+                  : ["Professional", "Cleaning", "&", "Pest", "Control", "in", "Qatar"];
+                
+                return (
+                  <motion.span
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      hidden: {},
+                      visible: {
+                        transition: {
+                          staggerChildren: 0.08,
+                          delayChildren: 0.1
+                        }
+                      }
+                    }}
+                    className="inline-block"
+                  >
+                    {words.map((word, index) => {
+                      const isHighlighted = isRtl 
+                        ? (word === "تنظيف" || word === "ومكافحة" || word === "حشرات")
+                        : (word === "Cleaning" || word === "&" || word === "Pest");
+                      
+                      return (
+                        <motion.span
+                          key={index}
+                          variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
+                          }}
+                          className={`inline-block mr-[0.15em] rtl:ml-[0.15em] ${
+                            isHighlighted 
+                              ? "text-transparent bg-clip-text bg-gradient-to-r from-brandblue to-indigo-400 font-extrabold"
+                              : ""
+                          }`}
+                        >
+                          {word}
+                        </motion.span>
+                      );
+                    })}
+                  </motion.span>
+                );
+              })()}
+            </h1>
 
             {/* Subtitle */}
             <motion.p
