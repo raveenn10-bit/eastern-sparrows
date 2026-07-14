@@ -80,7 +80,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+        <div className="flex md:grid md:grid-cols-3 gap-8 items-stretch mb-16 overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap pb-6 md:pb-0 scrollbar-none snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
           {tiers.map((tier, idx) => (
             <motion.div
               key={idx}
@@ -88,7 +88,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className={`glass-card p-8 flex flex-col justify-between relative border-2 ${
+              className={`glass-card p-8 flex flex-col justify-between relative border-2 snap-center shrink-0 w-[85%] md:w-auto ${
                 tier.popular
                   ? 'border-brandblue dark:border-brandblue/80 bg-white/90 dark:bg-slate-900/80 shadow-xl shadow-brandblue/5 scale-100 lg:scale-[1.03]'
                   : 'border-slate-200/50 dark:border-slate-800/50'

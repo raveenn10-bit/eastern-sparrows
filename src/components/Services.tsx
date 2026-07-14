@@ -114,13 +114,13 @@ export default function Services() {
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+            className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap pb-6 md:pb-0 scrollbar-none snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0"
           >
             {services.map((service) => (
               <motion.div
                 key={service.id}
                 variants={cardVariants}
-                className="glass-card flex flex-col justify-between p-6 bg-white/70 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-800/50 hover:shadow-xl hover:shadow-brandblue/5 transform hover:-translate-y-1.5 group"
+                className="glass-card flex flex-col justify-between p-6 bg-white/70 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-800/50 hover:shadow-xl hover:shadow-brandblue/5 transform hover:-translate-y-1.5 group snap-start shrink-0 w-[82%] sm:w-[45%] md:w-auto"
               >
                 <div>
                   {/* Icon Frame */}

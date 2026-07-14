@@ -216,7 +216,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap pb-6 md:pb-0 scrollbar-none snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
             {features.map((feat, idx) => (
               <motion.div
                 key={idx}
@@ -224,7 +224,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="p-6 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-4"
+                className="p-6 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-4 snap-center shrink-0 w-[78%] sm:w-[45%] md:w-auto"
               >
                 <div className="p-4 bg-brandblue/10 text-brandblue rounded-2xl">
                   <feat.icon className="w-6 h-6" />
