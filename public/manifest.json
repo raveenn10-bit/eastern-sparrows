@@ -1,0 +1,22 @@
+{
+  "name": "Eastern Sparrows – Pest Control & Cleaning",
+  "short_name": "Eastern Sparrows",
+  "description": "Premium Cleaning and Certified Pest Control Services in Qatar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B3C5D",
+  "theme_color": "#0B3C5D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
