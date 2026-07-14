@@ -49,9 +49,9 @@ export default function Gallery() {
           </motion.p>
 
           {/* Filters Control Group */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <div className="flex flex-row items-center justify-start sm:justify-center gap-4 mt-8 w-full overflow-x-auto scrollbar-none pb-2 flex-nowrap -mx-4 px-4 sm:mx-0 sm:px-0">
             {/* Category Filter */}
-            <div className="flex items-center gap-1.5 p-1 bg-white/80 dark:bg-slate-800 rounded-full shadow-sm border border-slate-200/50 dark:border-slate-800">
+            <div className="flex items-center gap-1.5 p-1 bg-white/80 dark:bg-slate-800 rounded-full shadow-sm border border-slate-200/50 dark:border-slate-800 shrink-0">
               <button
                 onClick={() => setFilter('all')}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
@@ -85,7 +85,7 @@ export default function Gallery() {
             </div>
 
             {/* Sector Filter */}
-            <div className="flex items-center gap-1.5 p-1 bg-white/80 dark:bg-slate-800 rounded-full shadow-sm border border-slate-200/50 dark:border-slate-800">
+            <div className="flex items-center gap-1.5 p-1 bg-white/80 dark:bg-slate-800 rounded-full shadow-sm border border-slate-200/50 dark:border-slate-800 shrink-0">
               <button
                 onClick={() => setSectorFilter('all')}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
@@ -123,7 +123,7 @@ export default function Gallery() {
         {/* Gallery Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap pb-6 md:pb-0 scrollbar-none snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0"
         >
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item) => (
@@ -134,7 +134,7 @@ export default function Gallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass-card overflow-hidden bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 flex flex-col group"
+                className="glass-card overflow-hidden bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 flex flex-col group snap-start shrink-0 w-[82%] sm:w-[48%] md:w-auto"
               >
                 {/* Image Comparison Box */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden flex bg-slate-200">
