@@ -51,13 +51,13 @@ export default function Gallery() {
           {/* Filters Control Group */}
           <div className="flex flex-row items-center justify-start sm:justify-center gap-4 mt-8 w-full overflow-x-auto scrollbar-none pb-2 flex-nowrap -mx-4 px-4 sm:mx-0 sm:px-0">
             {/* Category Filter */}
-            <div className="flex items-center gap-1.5 p-1 bg-white/80 dark:bg-slate-800 rounded-full shadow-sm border border-slate-200/50 dark:border-slate-800 shrink-0">
+            <div className="flex items-center gap-1.5 p-1 bg-slate-900 rounded-full shadow-sm border border-slate-800 shrink-0">
               <button
                 onClick={() => setFilter('all')}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   filter === 'all'
                     ? 'bg-navy-base text-white shadow-sm'
-                    : 'text-slate-500 hover:text-navy-base dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t.filterAll}
@@ -67,7 +67,7 @@ export default function Gallery() {
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   filter === 'cleaning'
                     ? 'bg-navy-base text-white shadow-sm'
-                    : 'text-slate-500 hover:text-navy-base dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t.filterCleaning}
@@ -77,7 +77,7 @@ export default function Gallery() {
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   filter === 'pest'
                     ? 'bg-navy-base text-white shadow-sm'
-                    : 'text-slate-500 hover:text-navy-base dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t.filterPest}
@@ -85,13 +85,13 @@ export default function Gallery() {
             </div>
 
             {/* Sector Filter */}
-            <div className="flex items-center gap-1.5 p-1 bg-white/80 dark:bg-slate-800 rounded-full shadow-sm border border-slate-200/50 dark:border-slate-800 shrink-0">
+            <div className="flex items-center gap-1.5 p-1 bg-slate-900 rounded-full shadow-sm border border-slate-800 shrink-0">
               <button
                 onClick={() => setSectorFilter('all')}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   sectorFilter === 'all'
                     ? 'bg-brandblue text-white shadow-sm'
-                    : 'text-slate-500 hover:text-brandblue dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t.filterAll}
@@ -101,7 +101,7 @@ export default function Gallery() {
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   sectorFilter === 'residential'
                     ? 'bg-brandblue text-white shadow-sm'
-                    : 'text-slate-500 hover:text-brandblue dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t.filterResidential}
@@ -111,7 +111,7 @@ export default function Gallery() {
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   sectorFilter === 'commercial'
                     ? 'bg-brandblue text-white shadow-sm'
-                    : 'text-slate-500 hover:text-brandblue dark:text-slate-300 dark:hover:text-white'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t.filterCommercial}
@@ -134,7 +134,7 @@ export default function Gallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass-card overflow-hidden bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 flex flex-col group snap-start shrink-0 w-[82%] sm:w-[48%] md:w-auto"
+                className="glass-card overflow-hidden bg-slate-900/60 border border-slate-800/50 flex flex-col group snap-start shrink-0 w-[82%] sm:w-[48%] md:w-auto"
               >
                 {/* Image Comparison Box */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden flex bg-slate-200">

@@ -65,9 +65,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakarta.variable} ${outfit.variable} ${cairo.variable} h-full antialiased`}
+      className={`${plusJakarta.variable} ${outfit.variable} ${cairo.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-slate-950">
+      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
         <AppContextProvider>
           {children}
         </AppContextProvider>
